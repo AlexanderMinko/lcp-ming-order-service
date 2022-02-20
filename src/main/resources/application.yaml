@@ -1,0 +1,23 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
+
+server:
+  port: 8091
+
+logging:
+  level:
+    com.lenovo.orderservice: debug
+    org.apache.kafka: warn
+    org.springframework.kafka: warn
+
+springdoc:
+  version: 1.0
+
+product-service:
+  url: http://localhost:8090
+
+application:
+  web-security-config:
+    custom-unsecured-endpoints:
