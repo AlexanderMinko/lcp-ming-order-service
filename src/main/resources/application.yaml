@@ -12,11 +12,14 @@ logging:
     org.apache.kafka: warn
     org.springframework.kafka: warn
 
-springdoc:
-  version: 1.0
-
 product-service:
   url: http://localhost:8090
+
+swagger:
+  api:
+    title: Order Service API
+    description: Service for managing orders
+    version: 1.0
 
 application:
   web-security-config:

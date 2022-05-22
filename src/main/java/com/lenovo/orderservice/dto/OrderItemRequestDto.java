@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @Builder
 public class OrderItemRequestDto {
 
-    private String productId;
-    private Integer count;
+  private String productId;
+  private Integer count;
 }

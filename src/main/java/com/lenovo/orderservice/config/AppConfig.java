@@ -1,16 +1,15 @@
 package com.lenovo.orderservice.config;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
-@Data
+@Getter
+@Setter
 public class AppConfig {
 
-    @Value("${product-service.url}")
-    private String productServiceUrl;
-
+  @Value("${product-service.url}")
+  private String productServiceUrl;
 }
