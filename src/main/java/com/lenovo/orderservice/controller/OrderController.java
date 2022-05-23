@@ -72,7 +72,7 @@ public class OrderController {
     return new ResponseEntity<>(orderService.makeOrder(orderRequestDto), HttpStatus.CREATED);
   }
 
-  @GetMapping("/{id}")
+  @GetMapping("/{id}/items")
   @Operation(summary = "Get list of orders", tags = {"Orders"}, operationId = "getOrdersUsingGET")
   @ApiResponses({
       @ApiResponse(responseCode = "200", description = "Ok"),
@@ -82,7 +82,7 @@ public class OrderController {
       @ApiResponse(responseCode = "404", description = "Not Found"),
       @ApiResponse(responseCode = "500", description = "Internal Server Error")
   })
-  public ResponseEntity<List<OrderItemResponseDto>> getOrdersByOrderId(@PathVariable String id) {
+  public ResponseEntity<List<OrderItemResponseDto>> getOrderItemsByOrderId(@PathVariable String id) {
     return new ResponseEntity<>(orderService.getOrderItemsByOrderId(id), HttpStatus.OK);
   }
 }

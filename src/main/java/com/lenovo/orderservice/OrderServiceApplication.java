@@ -9,6 +9,6 @@ import org.springframework.kafka.annotation.EnableKafka;
 public class OrderServiceApplication {
 
   public static void main(String[] args) {
-    var context = SpringApplication.run(OrderServiceApplication.class, args);
+    SpringApplication.run(OrderServiceApplication.class, args);
   }
 }
